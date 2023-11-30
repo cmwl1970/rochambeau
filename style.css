@@ -1,0 +1,199 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgb(11.1, 146.12, 222.06) 0%, rgb(119.53, 239.06, 231.89) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; /* Ensures the gradient covers the entire viewport */
+}
+
+.start-state {
+  position: relative; /* This ensures that .div is positioned relative to this container */
+  width: 100%;
+  height: 100%;
+}
+
+.start-state .div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.start-state .page-header {
+  position: absolute;
+  width: 920px; /* Or 100% if you want it to stretch across the full width */
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 128px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+
+
+.start-state .hand-group {
+  position: absolute;
+  width: 1440px;
+  height: 573px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cursor change for user */
+.start-state .hand-rock,
+.start-state .hand-paper,
+.start-state .hand-scissors {
+  cursor: pointer; 
+}
+
+/* Paper Element */
+.start-state .hand-paper {
+  position: absolute;
+  width: 450px;
+  height: 480px;
+  top: 93px;
+  left: 462px;
+  transform: scale(0.8);
+}
+
+.hand-paper:hover {
+  transform: scale(.95); 
+  background-image: url("img/hand-paper-hover.svg"); 
+}
+
+.hand-paper.selected {
+  background-image: url("img/hand-paper-orange.svg");
+}
+
+.hand-paper.computer-selected {
+  background-image: url("img/hand-paper-pink.svg");
+}
+
+.hand-paper-draw {
+  background-image: url('img/hand-paper-draw.svg');
+}
+
+/* Rock Element */
+.start-state .hand-rock {
+  position: absolute;
+  width: 390px;
+  height: 480px;
+  top: 93px;
+  left: 0;
+  transform: scale(0.8);
+}
+
+.hand-rock:hover {
+  transform: scale(.95);
+  background-image: url("img/hand-rock-hover.svg");
+}
+
+.hand-rock.selected {
+  background-image: url("/img/hand-rock-orange.svg");
+}
+
+.hand-rock.computer-selected {
+  background-image: url("img/hand-rock-pink.svg");
+}
+
+.hand-rock-draw {
+  background-image: url('img/hand-rock-draw.svg');
+}
+
+/* Scissor Element */
+.start-state .hand-scissors {
+  position: absolute;
+  width: 480px;
+  height: 390px;
+  top: 138px;
+  left: 960px;
+  transform: scale(0.8);
+}
+
+.hand-scissors:hover {
+  transform: scale(.95);
+  background-image: url("img/hand-scissors-hover.svg");
+}
+
+.hand-scissors.selected {
+  background-image: url("img/hand-scissors-orange.svg");
+}
+
+.hand-scissors.computer-selected {
+  background-image: url("img/hand-scissors-pink.svg");
+}
+
+.hand-scissors-draw {
+  background-image: url('img/hand-scissors-draw.svg');
+}
+
+/* Rock, Paper, Scissor Banner */
+.start-state .text-wrapper {
+  position: absolute;
+  width: 800px;
+  top: 0;
+  left: 320px;
+  font-family: "Inter", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+/* Overlap, includes letsGo background */
+.start-state .game-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 293px;
+  height: 79px;
+  top: 845px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(./img/rectangle-1.svg);
+  background-size: 100% 100%;
+}
+
+/* playButton "letsGo" */
+.start-state .letsGo {
+  cursor: pointer;
+  width: 204px; 
+  height: 50px; 
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.letsGo:hover {
+  transform: scale(1.1);
+}
+
+.start-state .letsGo.play-again {
+  font-size: 2.09em; 
+}
+
+
+
+
+
+
+
+
+
