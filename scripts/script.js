@@ -46,17 +46,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // play "letsGo" button listener
   letsGoButton.addEventListener("click", function () {
-    // Only clear choices if game has run
     if (letsGoButton.textContent === "Play Again?") {
       clearChoices();
-    // Otherwise start/play game
+      addChoiceEventListeners(); // Re-enable choice listeners for a new game
     } else {
       if (selectedChoice) {
         playGame(selectedChoice);
+        removeChoiceEventListeners(); // Disable choices after game starts
       } else {
         console.log("No choice selected"); // null choice
       }
-  }});
+    }
+  });
+
+  // add listeners after game end
+  function addChoiceEventListeners() {
+    choiceElements.forEach(elem => {
+      elem.addEventListener('click', handleChoiceClick);
+    });
+  }
+  
+  // remove listeners after game start
+  function removeChoiceEventListeners() {
+    choiceElements.forEach(elem => {
+      elem.removeEventListener('click', handleChoiceClick);
+    });
+  }
 
   // transform letsGo playbutton
   function updatePlayButton() {
