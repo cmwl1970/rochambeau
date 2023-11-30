@@ -99,7 +99,7 @@ html, body {
 }
 
 .hand-rock.selected {
-  background-image: url("/img/hand-rock-orange.svg");
+  background-image: url("img/hand-rock-orange.svg");
 }
 
 .hand-rock.computer-selected {
